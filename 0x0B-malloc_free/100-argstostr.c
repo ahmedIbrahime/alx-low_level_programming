@@ -1,4 +1,4 @@
-#include "main.h"
+0;10;1c#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -17,7 +17,7 @@ if (ac == 0 || av == NULL)
 return (NULL);
 for (i = 0, total = 0; i < ac; i++)
 {
-for (j = 0; *(*(av + i) + j) != '\0'; j++, total++) 
+for (j = 0; *(*(av + i) + j) != '\0'; j++, total++)
 total++;
 }
 total++;
