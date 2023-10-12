@@ -18,14 +18,10 @@ va_start(args, n);
 for (i = 0; i < n; i++)
 {
 x = va_arg(args, char *);
-if (x == NULL)
-{
-printf("(nil)");
-}
+ if (str)
+   printf("%s", str);
  else
- {
-   printf("%s", x);
- }
+   printf("(nil)");
 
 if (separator && i < n - 1)
 {
