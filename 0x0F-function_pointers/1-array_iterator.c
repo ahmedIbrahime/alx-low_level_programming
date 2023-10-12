@@ -2,7 +2,7 @@
 #include "function_pointers.h"
 
 /**
- * array  - prints an integer
+ * array_iterator  - prints an integer
  * @array: the array
  * @size: size of the array
  * @action: the function
@@ -14,7 +14,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 unsigned int i;
 
-if (array && size)
+if (array && action)
 {
 for (i = 0 ; i < size ; i++)
 {
