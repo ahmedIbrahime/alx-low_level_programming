@@ -6,6 +6,7 @@
  *
  * Return: no return.
  */
+
 void print_all(const char *const format, ...)
 {
 va_list args;
@@ -38,7 +39,7 @@ else
 printf("%s", str);
 break;
 default:
-break; /* Handle unknown format specifier gracefully */
+break;
 }
 i++;
 }
