@@ -22,6 +22,10 @@ if (x == NULL)
 {
 printf("(nil)");
 }
+ else
+ {
+   printf("%s", x);
+ }
 
 if (separator && i < n - 1)
 {
