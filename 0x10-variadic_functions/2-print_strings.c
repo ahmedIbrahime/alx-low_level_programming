@@ -18,8 +18,8 @@ va_start(args, n);
 for (i = 0; i < n; i++)
 {
 x = va_arg(args, char *);
- if (str)
-   printf("%s", str);
+ if (x)
+   printf("%s", x);
  else
    printf("(nil)");
 
