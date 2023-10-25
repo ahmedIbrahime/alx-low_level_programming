@@ -8,30 +8,22 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-listint_t *current, *temp, *checker;
+listint_t *current, *temp;
 size_t size = 0;
 
 if (h == NULL || *h == NULL)
 return (0);
 
-current = *h;
-checker = NULL;
-
-while (current != NULL)
+while (*h != NULL)
 {
 size++;
-temp = current;
-
-if (temp == checker)
-{
-*h = NULL;
-return (size);
-}
-
-checker = current;
-current = current->next;
+temp = *h;
+*h = (*h)->next;
 
 free(temp);
+
+if (temp <= *h)
+break;
 }
 
 *h = NULL;
