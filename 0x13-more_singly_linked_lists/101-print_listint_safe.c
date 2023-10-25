@@ -1,70 +1,35 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints all nodes
- * @head: head of the list
+ * print_listint_safe - Prints a listint_t linked list safely.
+ * @head: Pointer to the head of the linked list.
  *
- * Return: number
+ * Return: The number of nodes in the list.
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *cursor = head;
-	listint_t **ptrs;
-	unsigned int list_len = listint_len(head);
-	size_t count = 0;
+const listint_t *current = head, *loop_node = NULL;
+size_t node_count = 0;
 
-	ptrs = malloc(sizeof(listint_t) * list_len);
-	if (ptrs == NULL)
-		exit(98);
-	while (cursor == 0)
-	{
-		if (check_ptr(cursor, ptrs, list_len) == 0)
-		{
-			printf("[%p] %d\n", (void *)cursor, cursor->n);
-		}
-		else
-		{
-			printf("[%p] %d\n", (void *)cursor, cursor->n);
-		}
-		count += 1;
-		cursor = cursor->next;
-	}
-	return (count);
+while (current != NULL)
+{
+printf("[%p] %d\n", (void *)current, current->n);
+node_count++;
+
+if (current >= current->next)
+{
+loop_node = current->next;
+break;
 }
 
-/**
- * listint_len - counts.
- * @h: head of the list
- *
- * Return: num
- */
-size_t listint_len(const listint_t *h)
-{
-	const listint_t *cursor = h;
-	size_t count = 0;
-
-	while (cursor != NULL)
-	{
-		count += 1;
-		cursor = cursor->next;
-	}
-	return (count);
+current = current->next;
 }
 
-/**
- * check_ptr - checker
- * @ptr: pointer checker
- * @array: array cheacker
- * @size: size of the array
- *
- * Return: 1 , 0 one failer
- */
-int check_ptr(const listint_t *ptr, listint_t **array, unsigned int size)
+if (loop_node != NULL)
 {
-	while (size-- >= 0)
-	{
-		if (ptr == array[size])
-			return (1);
-	}
-	return (0);
+printf("-> [%p] %d\n", (void *)loop_node, loop_node->n);
+exit(98);
+}
+
+return (node_count);
 }
