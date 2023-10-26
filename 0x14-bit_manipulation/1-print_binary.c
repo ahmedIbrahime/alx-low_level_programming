@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * binary_to_uint - convert to unsign
- * @b: the char needed to be converted.
+ * print_binary - convert to binary
+ * @n: num to convert.
  *
  * Return: converted number.
  */
 
 void print_binary(unsigned long int n)
 {
-    if (n > 1)
-        print_binary(n >> 1);
+if (n > 1)
+print_binary(n >> 1);
 
-    _putchar((n & 1) + '0');
+_putchar((n & 1) + '0');
 }
