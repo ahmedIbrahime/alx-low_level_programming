@@ -40,7 +40,7 @@ return (result);
  */
 double power(double base, int exponent)
 {
-int i
+int i;
 double result = 1.0;
 
 if (exponent < 0)
