@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * set_bit - Set the value to 1.
+ * clear_bit - Set the value to 1.
  * @n: nnum poniter.
  * @index: The index given.
  *
