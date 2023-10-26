@@ -20,38 +20,12 @@ for (i = 0; i < len; i++)
 {
 if (b[i] == '1' || b[i] == '0')
 {
-result = result + (b[i] - '0') * power(2, len - i - 1);
+result = result + (b[i] - '0') * _power(2, len - i - 1);
 }
 else
 {
 return (0);
 }
-}
-
-return (result);
-}
-
-/**
- * power - calculate the power
- * @base : base.
- * @exponent : exponent.
- *
- * Return: result of convert.
- */
-double power(double base, int exponent)
-{
-int i;
-double result = 1.0;
-
-if (exponent < 0)
-{
-printf("Negative exponents are not supported in this example.\n");
-return (0.0);
-}
-
-for (i = 0; i < exponent; ++i)
-{
-result *= base;
 }
 
 return (result);
