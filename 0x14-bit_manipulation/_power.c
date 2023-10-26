@@ -1,5 +1,5 @@
 /**
- * power - calculate the power
+ * _power - calculate the power
  * @base : base.
  * @exponent : exponent.
  *
